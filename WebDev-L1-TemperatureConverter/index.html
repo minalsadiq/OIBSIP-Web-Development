@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main class="card">
+    <h1>Temperature Converter</h1>
+    <p class="subtitle">Convert between Celsius, Fahrenheit, and Kelvin — all three results update at once.</p>
+
+    <form id="converter-form" novalidate>
+      <label for="temp-value">Enter a temperature</label>
+      <input type="text" id="temp-value" inputmode="decimal" placeholder="e.g. 25" autocomplete="off">
+
+      <fieldset class="unit-select">
+        <legend>This value is in</legend>
+        <label class="unit-option">
+          <input type="radio" name="unit" value="C" checked>
+          <span>°C</span>
+        </label>
+        <label class="unit-option">
+          <input type="radio" name="unit" value="F">
+          <span>°F</span>
+        </label>
+        <label class="unit-option">
+          <input type="radio" name="unit" value="K">
+          <span>K</span>
+        </label>
+      </fieldset>
+
+      <button type="submit" class="convert-btn">Convert</button>
+      <p id="error-message" class="error-message" role="alert" aria-live="polite"></p>
+    </form>
+
+    <section class="results" id="results" aria-live="polite">
+      <div class="result-card" id="result-C">
+        <span class="result-label">Celsius</span>
+        <span class="result-value">—</span>
+      </div>
+      <div class="result-card" id="result-F">
+        <span class="result-label">Fahrenheit</span>
+        <span class="result-value">—</span>
+      </div>
+      <div class="result-card" id="result-K">
+        <span class="result-label">Kelvin</span>
+        <span class="result-value">—</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

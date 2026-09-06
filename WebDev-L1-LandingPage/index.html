@@ -1,0 +1,254 @@
+/* =========================================================
+OASIS INFOBYTE - Web Development & Designing | Level 1
+Minal Sadiq
+WebDev-L1-LandingPage
+========================================================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember &amp; Oak — Specialty Coffee Roasters | Faisalabad</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="wordmark">
+        <svg class="wordmark-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="16" fill="#A85C2A"/>
+          <path d="M10 13h10v6a5 5 0 0 1-5 5 5 5 0 0 1-5-5v-6z" fill="#FAF5EC"/>
+          <path d="M20 15h1.5a2 2 0 0 1 0 4H20" stroke="#FAF5EC" stroke-width="1.4" fill="none"/>
+        </svg>
+        Ember <span>&amp;</span> Oak
+      </a>
+      <nav class="main-nav">
+        <a href="#process">Our Process</a>
+        <a href="#roasts">Our Blends</a>
+        <a href="#reviews">Customer Reviews</a>
+        <a href="#visit">Visit Roastery</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker">Hand-roasted weekly right here in Faisalabad by Minal &amp; team</p>
+          <h1>Specialty coffee<br>roasted with real care.</h1>
+          <p class="hero-sub">Founded to bring authentic artisan coffee to Pakistan. We import specialty green beans from global partner estates and roast them in small batches at our local roastery.</p>
+          <div class="hero-actions">
+            <a href="#roasts" class="btn btn-primary">Explore Fresh Roasts</a>
+            <a href="#process" class="btn btn-ghost">How We Roast</a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>6</dt><dd>global farm partners</dd></div>
+            <div><dt>12kg</dt><dd>small batches</dd></div>
+            <div><dt>10 days</dt><dd>rested before dispatch</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="38%" r="60%">
+                <stop offset="0%" stop-color="#F1E6D8"/>
+                <stop offset="100%" stop-color="#F1E6D8" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="drum" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8A5A32"/>
+                <stop offset="100%" stop-color="#5C3320"/>
+              </linearGradient>
+              <linearGradient id="drumFront" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#B27B45"/>
+                <stop offset="100%" stop-color="#7A4A28"/>
+              </linearGradient>
+            </defs>
+
+            <circle cx="240" cy="230" r="220" fill="url(#glow)"/>
+
+            <!-- steam -->
+            <g stroke="#C9BBA6" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.65">
+              <path d="M178 70 q-14 -26 4 -46 q16 -18 4 -42"/>
+              <path d="M214 60 q-14 -26 4 -46 q16 -18 4 -42" opacity="0.45"/>
+              <path d="M250 70 q-14 -26 4 -46 q16 -18 4 -42" opacity="0.3"/>
+            </g>
+
+            <!-- roasting drum body -->
+            <g>
+              <ellipse cx="230" cy="330" rx="150" ry="34" fill="#3E2113" opacity="0.5"/>
+              <rect x="90" y="180" width="280" height="150" rx="18" fill="url(#drum)"/>
+              <rect x="90" y="180" width="280" height="36" rx="18" fill="#4A2C17"/>
+              <circle cx="230" cy="255" r="88" fill="url(#drumFront)"/>
+              <circle cx="230" cy="255" r="88" fill="none" stroke="#3E2113" stroke-width="6"/>
+              <circle cx="230" cy="255" r="62" fill="#5C3320"/>
+
+              <!-- beans tumbling inside the drum window -->
+              <g fill="#2B1B12">
+                <ellipse cx="205" cy="235" rx="10" ry="7" transform="rotate(-20 205 235)"/>
+                <ellipse cx="240" cy="250" rx="10" ry="7" transform="rotate(15 240 250)"/>
+                <ellipse cx="215" cy="275" rx="10" ry="7" transform="rotate(40 215 275)"/>
+                <ellipse cx="255" cy="220" rx="10" ry="7" transform="rotate(-35 255 220)"/>
+                <ellipse cx="250" cy="285" rx="10" ry="7" transform="rotate(5 250 285)"/>
+              </g>
+
+              <!-- handle / spout -->
+              <rect x="360" y="245" width="46" height="20" rx="10" fill="#4A2C17"/>
+              <circle cx="60" cy="255" r="16" fill="#3E2113"/>
+            </g>
+
+            <!-- legs -->
+            <g stroke="#3E2113" stroke-width="10" stroke-linecap="round">
+              <line x1="140" y1="330" x2="130" y2="380"/>
+              <line x1="320" y1="330" x2="330" y2="380"/>
+            </g>
+
+            <!-- scattered beans on the ground -->
+            <g fill="#7A4A28">
+              <ellipse cx="90" cy="400" rx="9" ry="6" transform="rotate(10 90 400)"/>
+              <ellipse cx="115" cy="415" rx="9" ry="6" transform="rotate(-25 115 415)"/>
+              <ellipse cx="365" cy="405" rx="9" ry="6" transform="rotate(20 365 405)"/>
+              <ellipse cx="390" cy="390" rx="9" ry="6" transform="rotate(-10 390 390)"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="process-layout">
+        <div class="process-art" aria-hidden="true">
+          <svg viewBox="0 0 380 460" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="380" height="460" rx="22" fill="#F1E6D8"/>
+            <circle cx="190" cy="150" r="86" fill="#C89361"/>
+            <circle cx="190" cy="150" r="86" fill="none" stroke="#A85C2A" stroke-width="3" stroke-dasharray="2 10" opacity="0.6"/>
+            <g fill="#5C3320">
+              <ellipse cx="165" cy="130" rx="13" ry="9" transform="rotate(-15 165 130)"/>
+              <ellipse cx="205" cy="145" rx="13" ry="9" transform="rotate(20 205 145)"/>
+              <ellipse cx="180" cy="175" rx="13" ry="9" transform="rotate(45 180 175)"/>
+              <ellipse cx="215" cy="180" rx="13" ry="9" transform="rotate(-10 215 180)"/>
+              <ellipse cx="155" cy="165" rx="13" ry="9" transform="rotate(70 155 165)"/>
+            </g>
+            <path d="M60 320 q130 -50 260 0 v90 q-130 40 -260 0 z" fill="#A85C2A" opacity="0.15"/>
+            <path d="M60 320 q130 -50 260 0" fill="none" stroke="#A85C2A" stroke-width="3"/>
+            <text x="190" y="410" text-anchor="middle" font-family="Fraunces, serif" font-size="20" fill="#5C4A3C">roasted in Faisalabad</text>
+          </svg>
+        </div>
+        <div class="process-copy">
+          <p class="eyebrow">Our strict 3-step method</p>
+          <h2>How we craft our coffee</h2>
+          <p class="process-intro">Every Tuesday and Friday at our Faisalabad roastery, we follow an exact, deliberate process to ensure absolute freshness in every bag.</p>
+          <ol class="process-steps">
+            <li>
+              <span class="step-index">1</span>
+              <div>
+                <h3>Ethical sourcing from 6 partner farms</h3>
+                <p>We source green coffee beans imported directly from verified farms across Ethiopia, Sumatra, and Colombia, ensuring fair trade practices and complete origin traceability.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-index">2</span>
+              <div>
+                <h3>Small-batch drum roasting</h3>
+                <p>We roast precisely 12 kilos at a time in our vintage drum roaster, relying on visual cues, aroma, and sound rather than automated computer profiles.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-index">3</span>
+              <div>
+                <h3>Ten-day resting window</h3>
+                <p>Every freshly roasted batch is allowed to rest and degas for ten full days before packaging, so it achieves peak flavor profiles before reaching your cup.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="roasts">
+      <div class="section-inner">
+        <div class="section-head">
+          <p class="eyebrow">Fresh weekly batches</p>
+          <h2>This week's coffee menu</h2>
+          <p>Small batches roasted in Faisalabad. Once a harvest lot sells out, it returns next season.</p>
+        </div>
+        <div class="roast-grid">
+          <article class="roast-card">
+            <div class="roast-visual roast-visual-light" aria-hidden="true">
+              <svg viewBox="0 0 200 140"><ellipse cx="60" cy="60" rx="16" ry="11" fill="#E4BB8C" transform="rotate(-20 60 60)"/><ellipse cx="110" cy="45" rx="16" ry="11" fill="#D9A876" transform="rotate(15 110 45)"/><ellipse cx="150" cy="80" rx="16" ry="11" fill="#E4BB8C" transform="rotate(35 150 80)"/><ellipse cx="90" cy="95" rx="16" ry="11" fill="#D9A876" transform="rotate(-10 90 95)"/><ellipse cx="35" cy="100" rx="16" ry="11" fill="#E4BB8C" transform="rotate(50 35 100)"/></svg>
+            </div>
+            <span class="roast-level">Light Roast</span>
+            <h3>Yirgacheffe, Ethiopia</h3>
+            <p class="roast-notes">Bergamot · Stone fruit · Jasmine</p>
+            <p>A delicate washed lot from the Gedeo zone, roasted lightly to preserve its vibrant, tea-like body and floral aroma.</p>
+          </article>
+          <article class="roast-card">
+            <div class="roast-visual roast-visual-medium" aria-hidden="true">
+              <svg viewBox="0 0 200 140"><ellipse cx="60" cy="60" rx="16" ry="11" fill="#B27B45" transform="rotate(-20 60 60)"/><ellipse cx="110" cy="45" rx="16" ry="11" fill="#8A5A32" transform="rotate(15 110 45)"/><ellipse cx="150" cy="80" rx="16" ry="11" fill="#B27B45" transform="rotate(35 150 80)"/><ellipse cx="90" cy="95" rx="16" ry="11" fill="#8A5A32" transform="rotate(-10 90 95)"/><ellipse cx="35" cy="100" rx="16" ry="11" fill="#B27B45" transform="rotate(50 35 100)"/></svg>
+            </div>
+            <span class="roast-level">Medium Roast</span>
+            <h3>Huila, Colombia</h3>
+            <p class="roast-notes">Brown sugar · Red apple · Cocoa</p>
+            <p>Our most popular roast among local coffee lovers syrupy and well-balanced, performing equally well in filter brews and espresso.</p>
+          </article>
+          <article class="roast-card">
+            <div class="roast-visual roast-visual-dark" aria-hidden="true">
+              <svg viewBox="0 0 200 140"><ellipse cx="60" cy="60" rx="16" ry="11" fill="#5C3320" transform="rotate(-20 60 60)"/><ellipse cx="110" cy="45" rx="16" ry="11" fill="#3E2113" transform="rotate(15 110 45)"/><ellipse cx="150" cy="80" rx="16" ry="11" fill="#5C3320" transform="rotate(35 150 80)"/><ellipse cx="90" cy="95" rx="16" ry="11" fill="#3E2113" transform="rotate(-10 90 95)"/><ellipse cx="35" cy="100" rx="16" ry="11" fill="#5C3320" transform="rotate(50 35 100)"/></svg>
+            </div>
+            <span class="roast-level">Dark Roast</span>
+            <h3>Mandheling, Sumatra</h3>
+            <p class="roast-notes">Cedar · Dark chocolate · Molasses</p>
+            <p>A wet-hulled dark roast offering a rich, low-acidity profile that cuts through milk effortlessly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="section-head section-head-center">
+        <p class="eyebrow">Local community feedback</p>
+        <h2>What people are saying</h2>
+      </div>
+      <blockquote class="featured-quote">
+        <p>"Minal and the team at Ember &amp; Oak have completely changed local coffee standards in Faisalabad. The Huila roast is smooth, sweet, and never tastes burnt."</p>
+        <cite>Aisha R.  subscriber since 2023</cite>
+      </blockquote>
+      <div class="quote-row">
+        <blockquote>
+          <p>"I visited the roastery to ask which beans would work best for my stovetop moka pot, and Minal walked me through the grind settings patiently."</p>
+          <cite>Daniyal K.</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Knowing that every batch is roasted locally right here in Faisalabad and rested for ten days makes all the difference in the cup."</p>
+          <cite>Farah S.</cite>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="visit">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="wordmark footer-wordmark">Ember <span>&amp;</span> Oak</p>
+        <p>...Colony No. ..., Faisalabad<br>Open Mon-Fri, 9:00 AM - 6:00 PM</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Minal</h4>
+        <p><a href="mailto:minal@emberandoak.example">minal@emberandoak.example</a></p>
+        <p><a href="tel:+923000000000">+92 300 0000000</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <p><a href="https://instagram.com" target="_blank">Instagram</a></p>
+        <p><a href="https://facebook.com" target="_blank">Facebook</a></p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Ember &amp; Oak Coffee Roasters. Founded by Minal Sadiq. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
