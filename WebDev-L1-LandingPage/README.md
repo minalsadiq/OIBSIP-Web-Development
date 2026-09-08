@@ -1,37 +1,95 @@
-# 🌐 Landing Page — Minal's Ember & Oak Coffee Roasters
-**OASIS INFOBYTE Internship - Web Development & Designing | Level 1, Task 1**
+# 🌐 Minal's Ember & Oak Coffee Roasters
 
-## Objective
-A visually polished static landing page for a locally crafted small-batch coffee roastery based in Faisalabad, built by Minal to establish foundational HTML/CSS layout skills (no JavaScript).
+**OASIS INFOBYTE Internship — Web Development & Designing | Level 1, Task 1**
 
-## Tech Stack
-HTML5 · CSS3 (Flexbox + Grid, no JavaScript)
+A modern, responsive landing page for a small-batch coffee roastery, built to demonstrate practical **HTML5 and CSS3** skills with a focus on responsive layouts, typography, visual hierarchy, and clean UI design.
 
-## Design Notes
-- **Palette:** warm parchment (`#FAF5EC`) base, roasted-bean ink (`#2B1B12`), copper accent (`#A85C2A`), and a muted sage green (`#5B6B3F`) for secondary labels chosen to evoke the roastery's own materials (beans, wood, farm) rather than a generic SaaS palette.
-- **Type:** `Fraunces` (serif display, variable optical size) for headings, `Work Sans` for body copy a confident, editorial type scale (hero heading up to 3.8rem).
-- **Layout:** every section uses a different structure on purpose a two-column hero with a hand-built SVG illustration of a drum roaster, an asymmetric "How We Roast" section (image + numbered steps), a 3-card product grid for the roasts, and an editorial pull-quote layout for reviews (not another card grid) so the page doesn't read as one repeated template block.
-- **Depth & interaction:** soft warm-toned shadows, hover lift on buttons and roast cards, underline-on-hover nav links.
-- **Craft details:** a custom SVG roastery mark in the nav, an 8px spacing scale used consistently throughout, and a mobile nav that wraps to a second row rather than collapsing into a hamburger — every one of the required nav links stays visible at every screen size.
+## 🎯 Objective
 
-## Feature Checklist Coverage
-- Sticky nav bar with 4 navigation links (Process, Our Coffees, Reviews, Visit Us)
-- Hero section with headline, subheadline, and two CTA buttons featuring Minal's brand
-- 3 distinct content sections: Process, Coffees (product cards), Reviews (testimonials)
-- Footer with Faisalabad location details, placeholder contact info, and social links
-- Consistent colour palette across all sections
-- Fully responsive (CSS Grid/Flexbox; tested at 1400px, 390px)
-- No element overlap; deliberate spacing throughout
-- Two clearly distinct font sizes/families (display vs. body)
+To design and develop a visually polished, responsive landing page using **HTML5 and CSS3**, without JavaScript.
 
-## Folder Structure
+## 🛠️ Tech Stack
 
+- **HTML5**
+- **CSS3**
+- Flexbox
+- CSS Grid
+- Responsive Design
+- SVG
+
+## ✨ Features
+
+- Sticky responsive navigation
+- Hero section with CTA buttons
+- Custom coffee roaster SVG illustration
+- "How We Roast" process section
+- Coffee product cards
+- Customer reviews section
+- Faisalabad location section
+- Responsive design for desktop and mobile
+- Hover effects and smooth transitions
+- Warm coffee-inspired visual theme
+- No JavaScript required
+
+## 🎨 Design
+
+The interface uses a warm, coffee-inspired palette:
+
+- `#FAF5EC` — Warm Parchment
+- `#2B1B12` — Roasted Bean
+- `#A85C2A` — Copper
+- `#5B6B3F` — Sage Green
+
+Typography combines **Fraunces** for headings with **Work Sans** for body text.
+
+## 📁 Project Structure
+
+```text
 WebDev-L1-LandingPage/
 ├── index.html
 ├── style.css
-├── images/        
+├── images/
 └── README.md
+```
 
+## 🚀 How to Run
 
-## How to View
-Open `index.html` directly in any browser — no build step or server required.
+No installation or build process is required.
+
+```bash
+git clone https://github.com/minalsadiq/OIBSIP-Web-Development.git
+```
+
+Then open `index.html` in your browser.
+
+## 📚 Skills Demonstrated
+
+- Responsive Web Design
+- HTML5 Structure
+- CSS Grid & Flexbox
+- UI/UX Design
+- Typography
+- CSS Animations & Hover Effects
+- Mobile Responsiveness
+
+## 🎓 Internship
+
+**Organization:** Oasis Infobyte  
+**Program:** OIBSIP  
+**Domain:** Web Development & Designing  
+**Level:** 1  
+**Task:** 1 — Landing Page
+
+## 👩‍💻 Author
+
+**Minal Sadiq**  
+Data Scientist | AI Engineer | Web Developer
+
+🔗 [GitHub](https://github.com/minalsadiq)  
+🔗 [LinkedIn](https://www.linkedin.com/in/minal-sadiq-4994b9372/)
+
+---
+
+⭐ If you like this project, consider giving the repository a star.
+
+**© 2026 Minal Sadiq**
