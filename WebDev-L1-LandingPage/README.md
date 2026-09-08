@@ -1,6 +1,6 @@
 # 🌐 Minal's Ember & Oak Coffee Roasters
 
-**OASIS INFOBYTE Internship — Web Development & Designing | Level 1, Task 1**
+**OASIS INFOBYTE Internship | Web Development & Designing | Level 1, Task 1**
 
 A modern, responsive landing page for a small-batch coffee roastery, built to demonstrate practical **HTML5 and CSS3** skills with a focus on responsive layouts, typography, visual hierarchy, and clean UI design.
 
@@ -78,7 +78,7 @@ Then open `index.html` in your browser.
 **Program:** OIBSIP  
 **Domain:** Web Development & Designing  
 **Level:** 1  
-**Task:** 1 — Landing Page
+**Task:** 1 - Landing Page
 
 ## 👩‍💻 Author
 
