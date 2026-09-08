@@ -1,33 +1,33 @@
-# 🌡️ Temperature Converter Website
-**OASIS INFOBYTE Internship — Web Development & Designing — Level 1, Task 3**
+# 🌡️ Temperature Converter
 
-## Objective
-An interactive web tool that converts a temperature value between Celsius, Fahrenheit, and
-Kelvin simultaneously, with real-time input validation.
+**OASIS INFOBYTE Internship | Web Development & Designing | Level 1, Task 3**
 
-## Tech Stack
-HTML5 · CSS3 · JavaScript (Vanilla)
+An interactive temperature conversion web application that converts values between **Celsius, Fahrenheit, and Kelvin** with real-time validation and edge-case handling.
 
-## Design Notes
-- **Palette:** a cool neutral background with a deep navy action button, blue for the
-  "source" value, and warm red reserved for validation errors — colour is used functionally
-  (source vs. computed vs. error), not decoratively.
-- **Type:** `Inter` throughout — a single utility tool doesn't need a second display face.
-- **Layout:** a single centred card; all three converted values are shown at once rather than
-  one at a time, so the relationship between units is visible immediately.
+## 🎯 Objective
 
-## Feature Checklist Coverage
-- Numeric input field with real-time validation (rejects empty/non-numeric input with a clear error message)
-- Radio-button unit selector for the **input** unit (Celsius / Fahrenheit / Kelvin)
-- All three output units shown simultaneously (auto-conversion, no separate output selector needed)
-- Convert button that triggers the calculation
-- Result display area with correct unit labels, source unit visually highlighted
-- Edge-case handling: rejects any input below absolute zero for the selected unit, with a
-  specific message (e.g. entering `-300°C` explains the -273.15°C physical limit)
-- Clean, centred UI with clear labels
+To build a simple, responsive, and user-friendly temperature converter using **HTML5, CSS3, and Vanilla JavaScript**.
 
-## Folder Structure
-```
+## 🛠️ Tech Stack
+
+- **HTML5**
+- **CSS3**
+- **JavaScript (Vanilla)**
+
+## ✨ Features
+
+- Convert between Celsius, Fahrenheit, and Kelvin
+- Real-time input validation
+- Absolute-zero validation
+- Clear error messages
+- All three converted values displayed simultaneously
+- Selected source unit highlighted
+- Clean and responsive UI
+- No external dependencies
+
+## 📁 Project Structure
+
+```text
 WebDev-L1-TemperatureConverter/
 ├── index.html
 ├── style.css
@@ -35,13 +35,48 @@ WebDev-L1-TemperatureConverter/
 └── README.md
 ```
 
-## How to View
-Open `index.html` directly in any browser — no build step or server required.
+## 🚀 How to Run
 
-## Manually Tested Scenarios
-| Input | Unit | Expected Result |
+No installation or build process is required.
+
+Open `index.html` directly in any modern browser.
+
+## 🧪 Test Cases
+
+| Input | Unit | Result |
 |---|---|---|
 | `25` | °C | 25.00 °C · 77.00 °F · 298.15 K |
-| `abc` | °C | Error: not a valid number |
-| `-300` | °C | Error: below absolute zero (-273.15 °C) |
-| *(empty)* | any | Error: please enter a value |
+| `abc` | °C | Invalid number error |
+| `-300` | °C | Below absolute zero error |
+| Empty | Any | Value required error |
+
+## 📚 Skills Demonstrated
+
+- JavaScript DOM Manipulation
+- Temperature Conversion Logic
+- Input Validation
+- Error Handling
+- Responsive Web Design
+- Interactive UI Development
+
+## 🎓 Internship
+
+**Organization:** Oasis Infobyte  
+**Program:** OIBSIP  
+**Domain:** Web Development & Designing  
+**Level:** 1  
+**Task:** 3 — Temperature Converter
+
+## 👩‍💻 Author
+
+**Minal Sadiq**  
+Data Scientist | AI Engineer | Web Developer
+
+🔗 [GitHub](https://github.com/minalsadiq)  
+🔗 [LinkedIn](https://www.linkedin.com/in/minal-sadiq-4994b9372/)
+
+---
+
+⭐ If you like this project, consider giving the repository a star.
+
+**© 2026 Minal Sadiq**
