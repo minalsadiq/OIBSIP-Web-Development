@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8fafc">
+    <meta name="description" content="Minal Sadiq — Data Scientist & AI Engineer Portfolio">
+
+    <title>Minal Sadiq | Data Scientist & AI Engineer Portfolio</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap"
+          rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+          rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Theme (Dark/Light) — set class before paint to avoid flash -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var isDark = saved ? saved === 'dark' : prefersDark;
+                if (isDark) {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+
+<body class="antialiased selection:bg-cyan-200 selection:text-slate-900">
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923091415861"
+       target="_blank"
+       rel="noopener"
+       class="whatsapp-button fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-slate-900 text-2xl shadow-2xl shadow-black/40 hover:scale-110 transition duration-300 group"
+       aria-label="Chat on WhatsApp">
+
+        <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-40"></span>
+
+        <i class="fa-brands fa-whatsapp relative"></i>
+
+        <span class="absolute right-16 whitespace-nowrap bg-white text-slate-900 text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none">
+            Chat on WhatsApp
+        </span>
+    </a>
+
+
+    <div id="page-wrapper">
+
+        <!-- Background Blobs -->
+        <div class="blob bg-cyan-500 w-[500px] h-[500px] top-[-100px] left-[-100px] animate-pulse-slow"></div>
+
+        <div class="blob bg-purple-600 w-[600px] h-[600px] top-[40%] right-[-200px] animate-pulse-slow delay-2"></div>
+
+        <div class="blob bg-blue-600 w-[500px] h-[500px] bottom-[10%] left-[-150px] animate-pulse-slow delay-4"></div>
+
+
+        <!-- ================= NAVBAR ================= -->
+
+        <header
+            class="fixed top-0 left-0 right-0 z-40 glass-card border-b border-slate-200 transition-all duration-300"
+            id="navbar">
+
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+                <a href="#" class="flex items-center gap-3 group">
+
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center font-bold text-slate-900 text-lg shadow-lg group-hover:scale-105 transition">
+                        MS
+                    </div>
+
+                    <div>
+                        <span class="text-lg font-bold tracking-tight text-slate-900 block">
+                            Minal Sadiq
+                        </span>
+
+                        <span class="text-[10px] code-font text-cyan-400 tracking-wider">
+                            AI & Data Scientist
+                        </span>
+                    </div>
+
+                </a>
+
+
+                <!-- Desktop Navigation -->
+
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+
+                    <a href="#about"
+                       class="text-slate-600 hover:text-cyan-400 transition">
+                        About
+                    </a>
+
+                    <a href="#skills"
+                       class="text-slate-600 hover:text-cyan-400 transition">
+                        Tech Stack
+                    </a>
+
+                    <a href="#projects"
+                       class="text-slate-600 hover:text-cyan-400 transition">
+                        Projects
+                    </a>
+
+                    <a href="#contact"
+                       class="text-slate-600 hover:text-cyan-400 transition">
+                        Contact
+                    </a>
+
+                </nav>
+
+
+                <div class="hidden md:flex items-center gap-4">
+
+                    <button id="theme-toggle"
+                            type="button"
+                            aria-label="Toggle dark mode"
+                            aria-pressed="false"
+                            class="theme-toggle-btn w-10 h-10 rounded-xl glass-card border border-slate-200 flex items-center justify-center text-slate-600 hover:text-cyan-400 hover:border-cyan-500/40 transition duration-300">
+
+                        <i class="fa-solid fa-moon text-sm theme-icon-moon"></i>
+                        <i class="fa-solid fa-sun text-sm theme-icon-sun hidden"></i>
+
+                    </button>
+
+                    <a href="#contact"
+                       class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-900 font-semibold text-xs shadow-lg hover:shadow-cyan-500/25 hover:scale-105 transition duration-300">
+
+                        Let's Connect
+
+                        <i class="fa-solid fa-arrow-right ml-1.5"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- Mobile Menu Button -->
+
+                <div class="md:hidden flex items-center gap-3">
+
+                    <button id="theme-toggle-mobile"
+                            type="button"
+                            aria-label="Toggle dark mode"
+                            aria-pressed="false"
+                            class="theme-toggle-btn w-10 h-10 rounded-xl glass-card border border-slate-200 flex items-center justify-center text-slate-600 hover:text-cyan-400 transition duration-300">
+
+                        <i class="fa-solid fa-moon text-sm theme-icon-moon"></i>
+                        <i class="fa-solid fa-sun text-sm theme-icon-sun hidden"></i>
+
+                    </button>
+
+                    <button id="menu-btn"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                            class="text-slate-600 hover:text-slate-900 text-xl focus:outline-none">
+
+                        <i class="fa-solid fa-bars-staggered"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mobile Menu -->
+
+            <div id="mobile-menu"
+                 class="hidden md:hidden glass-card border-t border-slate-200 px-6 py-5 space-y-4">
+
+                <a href="#about"
+                   class="block text-slate-600 hover:text-cyan-400 font-medium mobile-link">
+                    About
+                </a>
+
+                <a href="#skills"
+                   class="block text-slate-600 hover:text-cyan-400 font-medium mobile-link">
+                    Tech Stack
+                </a>
+
+                <a href="#projects"
+                   class="block text-slate-600 hover:text-cyan-400 font-medium mobile-link">
+                    Projects
+                </a>
+
+                <a href="#contact"
+                   class="block text-slate-600 hover:text-cyan-400 font-medium mobile-link">
+                    Contact
+                </a>
+
+                <a href="#contact"
+                   class="block text-center w-full py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-900 font-semibold text-xs">
+                    Let's Connect
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HERO / ABOUT ================= -->
+
+        <section id="about"
+                 class="pt-32 pb-20 md:pt-44 md:pb-32 relative">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+
+                    <!-- Left Content -->
+
+                    <div class="lg:col-span-7 space-y-6"
+                         data-aos="fade-right"
+                         data-aos-duration="1000">
+
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-cyan-400 text-xs font-semibold tracking-wide">
+
+                            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+
+                            Available for Data Science & AI Opportunities
+
+                        </div>
+
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+
+                            Hi, I'm
+
+                            <span class="gradient-text">
+                                Minal Sadiq
+                            </span>
+
+                        </h1>
+
+
+                        <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+
+                            Passionate
+
+                            <strong class="text-cyan-400 font-semibold">
+                                Data Science Professional
+                            </strong>
+
+                            & AI Engineer specializing in advanced machine learning models,
+                            predictive analytics, computer vision, and interactive Streamlit
+                            web applications. Dedicated to turning complex data into actionable
+                            intelligence and impactful user experiences.
+
+                        </p>
+
+
+                        <!-- Stats -->
+
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+
+                            <div class="glass-card p-4 rounded-xl text-center">
+
+                                <h3 class="text-2xl font-bold gradient-text">
+                                    5+
+                                </h3>
+
+                                <p class="text-xs text-slate-500 mt-1">
+                                    Core AI Models
+                                </p>
+
+                            </div>
+
+
+                            <div class="glass-card p-4 rounded-xl text-center">
+
+                                <h3 class="text-2xl font-bold gradient-text">
+                                    5
+                                </h3>
+
+                                <p class="text-xs text-slate-500 mt-1">
+                                    Live Deployed Apps
+                                </p>
+
+                            </div>
+
+
+                            <div class="glass-card p-4 rounded-xl text-center">
+
+                                <h3 class="text-2xl font-bold gradient-text">
+                                    4+
+                                </h3>
+
+                                <p class="text-xs text-slate-500 mt-1">
+                                    ML Domains
+                                </p>
+
+                            </div>
+
+
+                            <div class="glass-card p-4 rounded-xl text-center">
+
+                                <h3 class="text-2xl font-bold gradient-text">
+                                    3
+                                </h3>
+
+                                <p class="text-xs text-slate-500 mt-1">
+                                    DS Internships
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Buttons -->
+
+                        <div class="flex flex-wrap items-center gap-4 pt-4">
+
+                            <a href="#projects"
+                               class="px-7 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-900 font-bold text-sm shadow-lg shadow-cyan-500/20 hover:scale-105 transition duration-300">
+
+                                Explore Projects
+
+                                <i class="fa-solid fa-code ml-2"></i>
+
+                            </a>
+
+
+                            <a href="#contact"
+                               class="px-7 py-3 rounded-xl glass-card text-slate-700 font-bold text-sm hover:border-cyan-500 transition duration-300">
+
+                                Get in Touch
+
+                                <i class="fa-regular fa-envelope ml-2"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Right Visual -->
+
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center relative"
+                         data-aos="fade-left"
+                         data-aos-duration="1000">
+
+                        <div class="relative w-72 h-72 sm:w-80 sm:h-80 animate-float">
+
+                            <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-purple-600 rounded-3xl blur-xl opacity-40"></div>
+
+
+                            <div class="relative w-full h-full rounded-3xl glass-card p-2 overflow-hidden border border-cyan-500/30 shadow-2xl">
+
+                                <img id="profile-display-img"
+                                     src="minu.jpeg"
+                                     alt="Minal Sadiq"
+                                     class="w-full h-full object-cover rounded-2xl">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="py-20 relative">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="text-center max-w-2xl mx-auto mb-16"
+                     data-aos="fade-up">
+
+                    <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
+                        Expertise & Tools
+                    </span>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">
+                        Tech Stack & Core Skills
+                    </h2>
+
+                    <p class="text-slate-500 text-sm mt-2">
+                        Tools, frameworks, and technologies I leverage to build robust AI solutions.
+                    </p>
+
+                </div>
+
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+                    <!-- Machine Learning -->
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-200 hover:border-cyan-500/40 transition duration-300"
+                         data-aos="fade-up"
+                         data-aos-delay="100">
+
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl mb-4">
+
+                            <i class="fa-solid fa-brain"></i>
+
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-3">
+                            Machine Learning & AI
+                        </h3>
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                Scikit-Learn
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                TensorFlow
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                CNNs
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                Predictive Modeling
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                NLP & CV
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Data Analysis -->
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-200 hover:border-blue-500/40 transition duration-300"
+                         data-aos="fade-up"
+                         data-aos-delay="200">
+
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-4">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-3">
+                            Data Analysis & Prep
+                        </h3>
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                Python
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                Pandas
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                NumPy
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                SQL
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                Data Preprocessing
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Apps -->
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-200 hover:border-purple-500/40 transition duration-300"
+                         data-aos="fade-up"
+                         data-aos-delay="300">
+
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl mb-4">
+
+                            <i class="fa-solid fa-window-maximize"></i>
+
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-3">
+                            Apps & Dashboards
+                        </h3>
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                Streamlit
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                Netlify
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                HTML/CSS
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                UI/UX Design
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Tools -->
+
+                    <div class="glass-card p-6 rounded-2xl border border-slate-200 hover:border-cyan-500/40 transition duration-300"
+                         data-aos="fade-up"
+                         data-aos-delay="400">
+
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl mb-4">
+
+                            <i class="fa-solid fa-toolbox"></i>
+
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-3">
+                            Workflow & Tools
+                        </h3>
+
+                        <div class="flex flex-wrap gap-2">
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                Git & GitHub
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                Jupyter Notebooks
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                VS Code
+                            </span>
+
+                            <span class="px-2.5 py-1 rounded-lg bg-white text-xs text-slate-600 border border-slate-200">
+                                API Integration
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects"
+                 class="py-20 relative bg-slate-50">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="text-center max-w-2xl mx-auto mb-16"
+                     data-aos="fade-up">
+
+                    <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
+                        Portfolio Showcase
+                    </span>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">
+                        Featured Data Science Projects
+                    </h2>
+
+                    <p class="text-slate-500 text-sm mt-2">
+                        Explore my live deployed applications, machine learning models, and analytical dashboards.
+                    </p>
+
+                </div>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+                    <!-- Project 1 -->
+
+                    <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-cyan-500 transition duration-500 flex flex-col group"
+                         data-aos="fade-up"
+                         data-aos-delay="100">
+
+                        <div class="relative h-48 overflow-hidden bg-white">
+
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800"
+                                 alt="CardioPulse AI"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+
+                            <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-cyan-500 border border-cyan-500/30">
+                                Streamlit App
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+
+                            <div>
+
+                                <h3 class="text-xl font-bold group-hover:text-cyan-400 transition">
+                                    CardioPulse AI
+                                </h3>
+
+                                <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                                    Advanced machine learning web application for cardiovascular health prediction with real-time risk assessment and interactive analytics.
+                                </p>
+
+                                <div class="flex flex-wrap gap-1.5 mt-4">
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-cyan-600 code-font border border-slate-200">
+                                        Python
+                                    </span>
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-cyan-600 code-font border border-slate-200">
+                                        Streamlit
+                                    </span>
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-cyan-600 code-font border border-slate-200">
+                                        Scikit-Learn
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-200">
+
+                                <a href="https://github.com/minalsadiq/Minal-AI-CardioPulse"
+                                   target="_blank"
+                                   class="flex-1 py-2 text-center rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-700 transition">
+
+                                    <i class="fa-brands fa-github mr-1.5"></i>
+                                    Code
+
+                                </a>
+
+
+                                <a href="https://minal-ai-cardiopulse-9nofl4lxdqtf2vmmqexebg.streamlit.app/"
+                                   target="_blank"
+                                   class="flex-1 py-2 text-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-xs font-semibold text-white transition hover:opacity-90">
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square mr-1.5"></i>
+                                    Live Demo
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Project 2 -->
+
+                    <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-cyan-500 transition duration-500 flex flex-col group"
+                         data-aos="fade-up"
+                         data-aos-delay="200">
+
+                        <div class="relative h-48 overflow-hidden bg-white">
+
+                            <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&q=80&w=800"
+                                 alt="Apple Disease Detection"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+
+                            <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-green-500 border border-green-500/30">
+                                Computer Vision
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+
+                            <div>
+
+                                <h3 class="text-xl font-bold group-hover:text-cyan-400 transition">
+                                    Apple Disease Detection using CNN
+                                </h3>
+
+                                <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                                    Deep learning convolutional neural network trained to accurately identify and classify apple leaf diseases from image scans.
+                                </p>
+
+                                <div class="flex flex-wrap gap-1.5 mt-4">
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-green-600 code-font border border-slate-200">
+                                        TensorFlow
+                                    </span>
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-green-600 code-font border border-slate-200">
+                                        CNN
+                                    </span>
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-green-600 code-font border border-slate-200">
+                                        Python
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-200">
+
+                                <a href="https://github.com/minalsadiq/Apple-Disease-Detection-using-CNN"
+                                   target="_blank"
+                                   class="flex-1 py-2 text-center rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-700 transition">
+
+                                    <i class="fa-brands fa-github mr-1.5"></i>
+                                    Code
+
+                                </a>
+
+
+                                <a href="https://github.com/minalsadiq/Apple-Disease-Detection-using-CNN/blob/main/README.md"
+                                   target="_blank"
+                                   class="flex-1 py-2 text-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-xs font-semibold text-white transition hover:opacity-90">
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square mr-1.5"></i>
+                                    Details
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Project 3 -->
+
+                    <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-cyan-500 transition duration-500 flex flex-col group"
+                         data-aos="fade-up"
+                         data-aos-delay="300">
+
+                        <div class="relative h-48 overflow-hidden bg-white">
+
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800"
+                                 alt="Customer Churn Prediction"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+
+                            <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-purple-500 border border-purple-500/30">
+                                Predictive Analytics
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+
+                            <div>
+
+                                <h3 class="text-xl font-bold group-hover:text-cyan-400 transition">
+                                    Telco Customer Churn Analytics
+                                </h3>
+
+                                <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                                    Predictive modeling pipeline developed during Aptura Tech Solutions internship to analyze churn factors and retain customers.
+                                </p>
+
+                                <div class="flex flex-wrap gap-1.5 mt-4">
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-purple-600 code-font border border-slate-200">
+                                        Pandas
+                                    </span>
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-purple-600 code-font border border-slate-200">
+                                        Scikit-Learn
+                                    </span>
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-purple-600 code-font border border-slate-200">
+                                        Seaborn
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-200">
+
+                                <a href="https://github.com/minalsadiq/Telco-Customer-Churn-Predictive-Analytics"
+                                   target="_blank"
+                                   class="flex-1 py-2 text-center rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-700 transition">
+
+                                    <i class="fa-brands fa-github mr-1.5"></i>
+                                    Code
+
+                                </a>
+
+
+                                <a href="https://telco-customer-churn-predictive-analytics-c8oyhjvenuvrphqej6xd.streamlit.app/"
+                                   target="_blank"
+                                   class="flex-1 py-2 text-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-xs font-semibold text-white transition hover:opacity-90">
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square mr-1.5"></i>
+                                    Live Demo
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Project 4 -->
+
+                    <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 hover:border-cyan-500 transition duration-500 flex flex-col group"
+                         data-aos="fade-up"
+                         data-aos-delay="100">
+
+                        <div class="relative h-48 overflow-hidden bg-white">
+
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                                 alt="Marketing Campaign Response"
+                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+
+                            <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-blue-500 border border-blue-500/30">
+                                ML Modeling
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+
+                            <div>
+
+                                <h3 class="text-xl font-bold group-hover:text-cyan-400 transition">
+                                    Marketing Campaign Response Modelling
+                                </h3>
+
+                                <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                                    Data-driven machine learning model predicting customer responsiveness to targeted promotional campaigns to maximize ROI.
+                                </p>
+
+                                <div class="flex flex-wrap gap-1.5 mt-4">
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-blue-600 code-font border border-slate-200">
+                                        Python
+                                    </span>
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-blue-600 code-font border border-slate-200">
+                                        Classification
+                                    </span>
+
+                                    <span class="px-2 py-0.5 rounded bg-white text-[10px] text-blue-600 code-font border border-slate-200">
+                                        Matplotlib
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="flex items-center gap-3 mt-6 pt-4 border-t border-slate-200">
+
+                                <a href="https://github.com/minalsadiq/Marketing-Campaign-Response-Modelling"
+                                   target="_blank"
+                                   class="flex-1 py-2 text-center rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-700 transition">
+
+                                    <i class="fa-brands fa-github mr-1.5"></i>
+                                    Code
+
+                                </a>
+
+
+                                <a href="https://marketing-campaign-response-modelling-5yyltmwsuofq88dgr9mwwd.streamlit.app/"
+                                   target="_blank"
+                                   class="flex-1 py-2 text-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-xs font-semibold text-white transition hover:opacity-90">
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square mr-1.5"></i>
+                                    Live Demo
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="py-20 relative">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="text-center max-w-2xl mx-auto mb-16"
+                     data-aos="fade-up">
+
+                    <span class="text-cyan-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
+                        Get In Touch
+                    </span>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 tracking-tight">
+                        Let's Build Something Amazing Together
+                    </h2>
+
+                    <p class="text-slate-500 text-sm mt-2">
+                        Reach out for collaborations, data science projects, or professional inquiries.
+                    </p>
+
+                </div>
+
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+
+
+                    <!-- Contact Information -->
+
+                    <div class="lg:col-span-5 space-y-6"
+                         data-aos="fade-right">
+
+                        <div class="glass-card p-8 rounded-2xl border border-slate-200 space-y-6">
+
+                            <h3 class="text-xl font-bold">
+                                Contact Information
+                            </h3>
+
+                            <p class="text-slate-500 text-xs leading-relaxed">
+                                Feel free to connect with me through any of the platforms below or send a direct message using the contact form.
+                            </p>
+
+
+                            <div class="space-y-4 pt-2">
+
+
+                                <!-- GitHub -->
+
+                                <a href="https://github.com"
+                                   target="_blank"
+                                   class="flex items-center gap-4 p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200 hover:border-cyan-500/40 transition group">
+
+                                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-lg group-hover:scale-110 transition">
+
+                                        <i class="fa-brands fa-github"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <span class="text-[10px] text-slate-500 uppercase tracking-wider block">
+                                            GitHub Repository
+                                        </span>
+
+                                        <span class="text-xs font-bold text-slate-900 group-hover:text-cyan-400 transition">
+                                            github.com/minalsadiq
+                                        </span>
+
+                                    </div>
+
+                                </a>
+
+
+                                <!-- LinkedIn -->
+
+                                <a href="https://www.linkedin.com/in/minal-sadiq-4994b9372/"
+                                   target="_blank"
+                                   class="flex items-center gap-4 p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200 hover:border-blue-500/40 transition group">
+
+                                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 text-lg group-hover:scale-110 transition">
+
+                                        <i class="fa-brands fa-linkedin-in"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <span class="text-[10px] text-slate-500 uppercase tracking-wider block">
+                                            LinkedIn Profile
+                                        </span>
+
+                                        <span class="text-xs font-bold text-slate-900 group-hover:text-blue-400 transition">
+                                            minal-sadiq-4994b9372
+                                        </span>
+
+                                    </div>
+
+                                </a>
+
+
+                                <!-- Email -->
+
+                                <a href="mailto:minalsadiq.ai@gmail.com"
+                                   class="flex items-center gap-4 p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200 hover:border-purple-500/40 transition group">
+
+                                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg group-hover:scale-110 transition">
+
+                                        <i class="fa-regular fa-envelope"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <span class="text-[10px] text-slate-500 uppercase tracking-wider block">
+                                            Email Address
+                                        </span>
+
+                                        <span class="text-xs font-bold text-slate-900 group-hover:text-purple-400 transition">
+                                            minalsadiq.ai@gmail.com
+                                        </span>
+
+                                    </div>
+
+                                </a>
+
+
+                                <!-- WhatsApp -->
+
+                                <a href="https://wa.me/923091415861"
+                                   target="_blank"
+                                   class="flex items-center gap-4 p-3 rounded-xl bg-slate-50 hover:bg-white border border-slate-200 hover:border-green-500/40 transition group">
+
+                                    <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 text-lg group-hover:scale-110 transition">
+
+                                        <i class="fa-brands fa-whatsapp"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <span class="text-[10px] text-slate-500 uppercase tracking-wider block">
+                                            WhatsApp
+                                        </span>
+
+                                        <span class="text-xs font-bold text-slate-900 group-hover:text-green-500 transition">
+                                            +92 309 1415861
+                                        </span>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact Form -->
+
+                    <div class="lg:col-span-7"
+                         data-aos="fade-left">
+
+                        <form id="contact-form"
+                              class="glass-card p-8 rounded-2xl border border-slate-200 space-y-5">
+
+                            <h3 class="text-xl font-bold">
+                                Send a Message
+                            </h3>
+
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                                <div>
+
+                                    <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                                        Your Name
+                                    </label>
+
+                                    <input type="text"
+                                           id="sender-name"
+                                           required
+                                           placeholder="Name"
+                                           class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-xs text-slate-700 focus:outline-none focus:border-cyan-500 transition">
+
+                                </div>
+
+
+                                <div>
+
+                                    <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                                        Your Email
+                                    </label>
+
+                                    <input type="email"
+                                           id="sender-email"
+                                           required
+                                           placeholder="you@example.com"
+                                           class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-xs text-slate-700 focus:outline-none focus:border-cyan-500 transition">
+
+                                </div>
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                                    Subject
+                                </label>
+
+                                <input type="text"
+                                       id="sender-subject"
+                                       required
+                                       placeholder="Project Collaboration / Inquiry"
+                                       class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-xs text-slate-700 focus:outline-none focus:border-cyan-500 transition">
+
+                            </div>
+
+
+                            <div>
+
+                                <label class="block text-xs font-medium text-slate-600 mb-1.5">
+                                    Message
+                                </label>
+
+                                <textarea id="sender-message"
+                                          rows="4"
+                                          required
+                                          placeholder="Write your message here..."
+                                          class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-xs text-slate-700 focus:outline-none focus:border-cyan-500 transition resize-none"></textarea>
+
+                            </div>
+
+
+                            <button type="submit"
+                                    id="contact-submit-btn"
+                                    class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xs shadow-lg shadow-cyan-500/25 hover:scale-[1.02] transition duration-300 flex items-center justify-center gap-2">
+
+                                <span id="contact-submit-text">
+                                    Send Message
+                                </span>
+
+                                <i class="fa-solid fa-paper-plane text-xs"
+                                   id="contact-submit-icon"></i>
+
+                            </button>
+
+
+
+                            <div id="form-success-msg"
+                                 class="hidden text-center text-xs text-cyan-500 font-semibold pt-2">
+
+                                <i class="fa-solid fa-circle-check mr-1"></i>
+
+                                Thank you! Your message has been sent successfully.
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="py-10 border-t border-slate-200 bg-white text-center">
+
+            <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+
+                <p class="text-xs text-slate-500">
+                    © 2026 Minal Sadiq. All rights reserved. Built with passion & precision.
+                </p>
+
+
+                <div class="flex items-center gap-4 text-slate-500 text-sm">
+
+                    <a href="https://github.com"
+                       target="_blank"
+                       class="hover:text-cyan-400 transition">
+
+                        <i class="fa-brands fa-github"></i>
+
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/minal-sadiq-4994b9372/"
+                       target="_blank"
+                       class="hover:text-blue-400 transition">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="https://wa.me/923091415861"
+                       target="_blank"
+                       class="hover:text-green-400 transition">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                    <a href="mailto:minalsadiq.ai@gmail.com"
+                       class="hover:text-purple-400 transition">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

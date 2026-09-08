@@ -1,0 +1,504 @@
+/* =========================================================
+   Minal Sadiq Portfolio - Bright Theme
+   ========================================================= */
+
+:root {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --surface-soft: #f1f5f9;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+
+    --cyan: #06b6d4;
+    --blue: #3b82f6;
+    --purple: #8b5cf6;
+
+    --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+
+/* ================= BASE ================= */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+#page-wrapper {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.code-font {
+    font-family: 'Fira Code', monospace;
+}
+
+
+/* ================= LIGHT GLASS CARDS ================= */
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.84);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(148, 163, 184, 0.22);
+
+    box-shadow:
+        0 10px 35px rgba(15, 23, 42, 0.055);
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease,
+        background .3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(6, 182, 212, 0.38);
+
+    box-shadow:
+        0 18px 45px rgba(6, 182, 212, 0.11);
+}
+
+
+/* ================= GRADIENT TEXT ================= */
+
+.gradient-text {
+    background:
+        linear-gradient(
+            135deg,
+            #0891b2 0%,
+            #2563eb 50%,
+            #7c3aed 100%
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ================= GRADIENT BORDER ================= */
+
+.gradient-border {
+    position: relative;
+    border-radius: 1rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            var(--purple)
+        );
+
+    padding: 1px;
+}
+
+.gradient-border-inner {
+    background: var(--surface);
+    border-radius: calc(1rem - 1px);
+}
+
+
+/* ================= BACKGROUND BLOBS ================= */
+
+.blob {
+    position: absolute;
+
+    filter: blur(85px);
+
+    z-index: -1;
+
+    opacity: .22;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* ================= FLOAT ANIMATION ================= */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+
+/* ================= SLOW PULSE ================= */
+
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        opacity: .16;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .25;
+        transform: scale(1.04);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.delay-2 {
+    animation-delay: 2s;
+}
+
+.delay-4 {
+    animation-delay: 4s;
+}
+
+
+/* ================= NAVBAR ================= */
+
+#navbar.scrolled {
+    background: rgba(255, 255, 255, .94) !important;
+
+    border-bottom-color:
+        rgba(148, 163, 184, .25) !important;
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, .08) !important;
+}
+
+
+/* ================= CONTACT FORM ================= */
+
+#contact-form input,
+#contact-form textarea {
+
+    background: #ffffff !important;
+
+    color: #334155 !important;
+
+    border-color: #cbd5e1 !important;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: #94a3b8;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+
+    border-color: #06b6d4 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(6, 182, 212, .10);
+}
+
+
+/* ================= PROJECT SECTION ================= */
+
+#projects {
+    background:
+        linear-gradient(
+            180deg,
+            #f1f5f9 0%,
+            #f8fafc 100%
+        ) !important;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #ffffff !important;
+
+    border-top-color:
+        #e2e8f0 !important;
+}
+
+
+/* ================= CUSTOM SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4;
+}
+
+
+/* ================= TEXT FIXES ================= */
+
+.glass-card .text-slate-900,
+#navbar .text-slate-900,
+#projects .text-slate-900,
+footer .text-slate-900 {
+    color: #0f172a !important;
+}
+
+
+/* Gradient buttons */
+
+.bg-gradient-to-r.text-slate-900,
+.bg-gradient-to-tr.text-slate-900 {
+    color: #ffffff !important;
+}
+
+
+/* WhatsApp */
+
+.whatsapp-button.text-slate-900 {
+    color: #ffffff !important;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 767px) {
+
+    .blob {
+        opacity: .15;
+        filter: blur(65px);
+    }
+
+}
+
+
+/* =========================================================
+   DARK MODE
+   Toggle by adding/removing the "dark" class on <html>
+   (handled by script.js). Overrides the light Tailwind
+   utility classes used throughout index.html.
+   ========================================================= */
+
+html.dark {
+    --bg: #0a0f1d;
+    --surface: #111827;
+    --surface-soft: #1f2937;
+    --text: #f3f4f6;
+    --muted: #94a3b8;
+    --border: #374151;
+
+    --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+html.dark body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Smooth crossfade between themes */
+body,
+.glass-card,
+#navbar,
+footer,
+#projects,
+#contact-form input,
+#contact-form textarea {
+    transition:
+        background-color .4s ease,
+        color .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+}
+
+
+/* ================= DARK GLASS CARDS ================= */
+
+html.dark .glass-card {
+    background: rgba(17, 24, 39, 0.75);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+html.dark .glass-card:hover {
+    border-color: rgba(6, 182, 212, 0.4);
+    box-shadow: 0 18px 45px rgba(6, 182, 212, 0.18);
+}
+
+html.dark .gradient-border-inner {
+    background: var(--surface);
+}
+
+
+/* ================= DARK SURFACES & BACKGROUNDS ================= */
+
+html.dark .bg-white,
+html.dark .hover\:bg-white:hover {
+    background-color: #111827 !important;
+}
+
+html.dark .bg-white\/90 {
+    background-color: rgba(17, 24, 39, 0.9) !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .hover\:bg-slate-100:hover {
+    background-color: #1f2937 !important;
+}
+
+html.dark .bg-slate-100 {
+    background-color: #1f2937 !important;
+}
+
+html.dark #projects,
+html.dark section#projects.bg-slate-50 {
+    background: linear-gradient(180deg, #0a0f1d 0%, #0d1424 100%) !important;
+}
+
+
+/* ================= DARK TEXT ================= */
+
+html.dark .text-slate-900,
+html.dark .glass-card .text-slate-900,
+html.dark #navbar .text-slate-900,
+html.dark #projects .text-slate-900,
+html.dark footer .text-slate-900 {
+    color: #f8fafc !important;
+}
+
+html.dark .text-slate-700 {
+    color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-600 {
+    color: #9ca3af !important;
+}
+
+html.dark .text-slate-500 {
+    color: #94a3b8 !important;
+}
+
+
+/* ================= DARK BORDERS ================= */
+
+html.dark .border-slate-200,
+html.dark .border-slate-300 {
+    border-color: #374151 !important;
+}
+
+
+/* ================= DARK NAVBAR ================= */
+
+html.dark #navbar.scrolled {
+    background: rgba(17, 24, 39, .92) !important;
+    border-bottom-color: rgba(255, 255, 255, .08) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .35) !important;
+}
+
+
+/* ================= DARK CONTACT FORM ================= */
+
+html.dark #contact-form input,
+html.dark #contact-form textarea {
+    background: #0d1424 !important;
+    color: #f3f4f6 !important;
+    border-color: #374151 !important;
+}
+
+html.dark #contact-form input::placeholder,
+html.dark #contact-form textarea::placeholder {
+    color: #64748b;
+}
+
+html.dark #contact-form input:focus,
+html.dark #contact-form textarea:focus {
+    border-color: #06b6d4 !important;
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, .18);
+}
+
+
+/* ================= DARK FOOTER ================= */
+
+html.dark footer {
+    background: #0a0f1d !important;
+    border-top-color: #1f2937 !important;
+}
+
+
+/* ================= DARK BLOBS ================= */
+
+html.dark .blob {
+    opacity: .28;
+}
+
+
+/* ================= DARK SCROLLBAR ================= */
+
+html.dark ::-webkit-scrollbar-track {
+    background: #0a0f1d;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+    background: #374151;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4;
+}
+
+
+/* ================= THEME TOGGLE BUTTON ================= */
+
+.theme-toggle-btn {
+    transition: color .3s ease, border-color .3s ease, transform .2s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: rotate(15deg);
+}
+
+html.dark .theme-toggle-btn {
+    color: #e2e8f0;
+}
+
+
+/* ================= ACCESSIBILITY ================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: .01ms !important;
+    }
+}
